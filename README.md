@@ -32,4 +32,8 @@ I used CSS and HTML for this project in order to build and style this website. A
 ## Links 
 GitHub Repo: [https://github.com/spencer1227/sturdy-dollop]
 
-Deploy: 
+Deploy: [https://spencer1227.github.io/sturdy-dollop/]
+
+## Screenshot
+![Screenshot](./assets/photo/Screenshot1.png)
+![Screenshot](./assets/photo/Screenshot2.png)
