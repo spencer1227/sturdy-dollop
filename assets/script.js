@@ -6,7 +6,7 @@ document.getElementById("search-button").addEventListener("click", function(){
 });
 
 function geocode(cityName) {
-    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${APIkey}`)
+    fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${APIkey}`)
     .then(Response => Response.json())
     .then(data => {
         console.log(data)
@@ -41,7 +41,10 @@ function currentWeather(lat,lon) {
         var humidity = document.createElement("h4")
         humidity.textContent = "Humidity: "+data.main.humidity+"%"
 
-        divCard.append(date, name, temp, wind, humidity)
+        var badge = document.createElement("img")
+        badge.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png` 
+
+        divCard.append(date, name, temp, wind, humidity, badge)
         document.getElementById("today").append(divCard)
     })
 };
@@ -73,27 +76,15 @@ var divCard =  document.createElement("div")
         var humidity = document.createElement("h4")
         humidity.textContent = "Humidity: "+data.list[i].main.humidity+"%"
         
+        var badge = document.createElement("img")
+        badge.src = `https://openweathermap.org/img/wn/${data.list[i].weather[0].icon}@2x.png`
 
-        divCard.append(date, temp, wind, humidity)
+        divCard.append(date, temp, wind, humidity, badge)
         document.getElementById("future").append(divCard)
 
-
-
     }
-        // var divCard =  document.createElement("div")
-        // divCard.setAttribute("class", "currentcard")
-
-        // var name = document.createElement("h2")
-        // name.textContent = data.name
-
-        // var temp = document.createElement("h2")
-        // temp.textContent = "Temp: "+data.main.temp
-
-
-        // divCard.append(name, temp)
-        // document.getElementById("today").append(divCard)
     })
 };
 
-// geocode("Atlanta")
+
 

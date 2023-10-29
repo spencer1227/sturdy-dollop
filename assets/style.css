@@ -1,25 +1,14 @@
-/* .container-fluid {
-    columns: 30px;
+
+h1 {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-#search-button {
-
-} */
-
-/* #future {
-    display: table-row-group;
-   
-
-} */
-
-/* .col-lg-9 {
-    display: grid
-} */
 
 .currentcard {
     display: block;
     /* width: 200px; */
-    border: 2px solid blue;
+    border: 2px solid rgb(0, 38, 255);
     padding: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -39,4 +28,8 @@
     padding: 10px;
     margin: 2px;
 
+}
+
+img {
+    display: flex;
 }
